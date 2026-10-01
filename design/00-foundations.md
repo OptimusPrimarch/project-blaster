@@ -1,4 +1,4 @@
-# Dogs of War — Infinity N5 Mercenary Game Mode (v0.8 draft)
+# Dogs of War — Infinity N5 Mercenary Game Mode (v0.9 draft)
 
 A **non-commercial, fan-made game mode for Infinity N5**, intended as a love letter to Corvus Belli.
 
@@ -29,7 +29,7 @@ Status tags:
 | 5b | Impetuous | First in the round, before the Pilot phase | **LOCKED** |
 | 6 | Lieutenant | Costs credits on any eligible model, the pilot included. NCO costs more. Using the Lieutenant Order reveals who the Lieutenant is, which is the counterweight. | **LOCKED** |
 | 7 | Command Tokens | Fixed N5 pool, slightly enlarged, so they dwindle over the game. Expanded uses. | **LOCKED** |
-| 8 | Suppressive Fire | N5 state, unchanged | **LOCKED** |
+| 8 | Suppressive Fire | N5 state, unchanged, including how long it lasts (believed to be until the model next activates; check the N5 text) | **LOCKED** |
 | 9 | Force cap | 1 TAG or pilot + 10 infantry on the table. A second pilot (Elite) may also call in a reserve TAG, for most of your Command Tokens. | **LOCKED** |
 | 10 | Allocation | 60–100 credits | **LOCKED** |
 | 11 | Elites | Up to 5, including reserves. Profile + 1 kit. Cap expandable with Command Tokens. A second pilot is an expensive Elite option. | **LOCKED** |
@@ -46,7 +46,7 @@ Status tags:
 | 22 | Miniatures | Corvus Belli miniatures recommended; N5 silhouettes for every unit | **LOCKED** |
 | 23 | Board | 36"×36", very dense | **LOCKED** |
 | 24 | Victory | Objectives | **LOCKED** |
-| 25 | Mode | PvP and PvPvE | **LOCKED** |
+| 25 | Mode | PvP first. PvPvE is the very last thing we add; it might be static emplacements that ARO, like the Qaz creatures in some scenarios. | **LOCKED** (PvPvE deferred) |
 | 26 | List-building tool | New Recruit catalogue as the source of truth, hosted in a new public repo, **Dogs of War**. Cards generated from it later. | **LOCKED** (§8) |
 
 ---
@@ -164,7 +164,7 @@ In every phase, the initiative player takes a standard N5 active turn, and the o
 | Rule | Detail |
 |---|---|
 | **Mount / dismount** | Free with any movement skill |
-| **Eject** | Test when the TAG is destroyed. **PROPOSED:** a PH roll. |
+| **Eject** | Test when the TAG is destroyed. **OPEN:** an existing N5 TAG already has an eject-style skill; reuse it (you're looking it up). |
 | **Jockey** | Pilots only. End any movement in base contact with an enemy TAG, then roll WIP vs WIP face-to-face. |
 | **Unmanned TAGs** | A pilot can climb into an enemy TAG whose pilot has dismounted, and take it |
 
@@ -221,8 +221,8 @@ Build the **New Recruit catalogue as the single source of truth**. Generate prin
 
 ### Hosting
 - New Recruit loads any GitHub repo with the .gst/.cat files **at the repo root**, via "Add or Remove games" → "Add from Github."
-- **LOCKED:** a new public repo, **Dogs of War**. GitHub names can't contain spaces, so the repo itself would be `dogs-of-war`.
-- This repo (`project-blaster`) stays the design workspace.
+- **LOCKED:** a new public repo, `dogs-of-war`. It holds both the catalogue (.gst/.cat at the root) and the design docs (in `design/`).
+- Once it exists, `dogs-of-war` is the single home for the design docs. The copy in `project-blaster` becomes an archive.
 
 ---
 
@@ -247,9 +247,8 @@ Build the **New Recruit catalogue as the single source of truth**. Generate prin
 
 ## 10. Open questions
 
-1. **"Until your next turn" effects:** now that each player's part of a phase is a turn, how long do N5 effects such as Suppressive Fire last? Proposed: until the start of that player's next **round**.
-2. **Eject test:** a PH roll?
-3. **PvPvE:** when do AI hostiles act?
+1. **Eject:** which existing N5 TAG skill do we reuse? (You're looking it up.)
+2. **PvPvE:** deferred to last. Starting idea: static hostile emplacements that only ARO.
 
 ## 11. Numbers to set during balancing
 
