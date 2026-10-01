@@ -1,14 +1,18 @@
-# Project Blaster — Foundations (v0.3 draft)
+# Project Blaster — Foundations (v0.4 draft)
 
-Working title from the repo name.
+An **unofficial, fan-made mercenary variant of Infinity N5**.
+
+**How to read this doc:** Infinity N5 is the baseline (dice, attributes, weapons, range bands, AROs, states, hacking, armor saves). This document records only:
+1. What we **change** from N5 (the "diff").
+2. What we **add** on top.
+
+Anything not mentioned here follows N5.
 
 Status tags:
 - **LOCKED**: agreed.
 - **PROPOSED**: my recommendation, waiting on your call.
 - **OPEN**: needs discussion.
-- **PARKED**: deliberately on hold.
-
-Influences: Titanfall, Helldivers, Infinity, Stargrave, Arsenal: Fireteam, BLKOUT, Anthem, Lancer. Built from scratch; no rules or text from other projects. Being close to Infinity in places is fine.
+- **REVIEW**: one of our earlier ideas that N5 may already cover; keep or cut.
 
 ---
 
@@ -16,318 +20,262 @@ Influences: Titanfall, Helldivers, Infinity, Stargrave, Arsenal: Fireteam, BLKOU
 
 | # | Topic | Decision | Status |
 |---|---|---|---|
-| 1 | Tone | Grounded at the boots, satirical at the top. Players command mercenary companies. | **LOCKED** |
-| 2 | Lethality | Infinity-level | **LOCKED** |
+| 1 | Baseline | Infinity N5: dice, attributes, weapons, range bands, AROs, armor | **LOCKED** |
+| 2 | Tone | Grounded at the boots, satirical at the top. Players command mercenary companies. | **LOCKED** |
 | 3 | Phases | Command → Pilot → Elite → Grunt, with alternating activations inside each phase | **LOCKED** |
-| 4 | Dice | d20, roll-under | **LOCKED** |
-| 5 | Reactions | Shooting back with 1 die is free. Reacting with full dice requires Overwatch, which costs an action. | **LOCKED** |
-| 6 | Board | 36"×36", very dense terrain | **LOCKED** |
-| 7 | Weapon range | No range requirements | **LOCKED** |
-| 8 | Scale | 28mm and 32mm are interchangeable; base size is what matters | **LOCKED** |
-| 9 | Infantry bases | 25mm standard, 40mm heavy armor. Infinity silhouettes. | **LOCKED** |
-| 10 | Mech line of sight | True line of sight to the model | **LOCKED** |
-| 11 | Mech bases | Reuse Infinity where possible; also accept BLKOUT and Arsenal mech bases | **LOCKED** (sizes in §3) |
-| 12 | Force cap | 1 mech or pilot + 10 infantry on the table per side | **LOCKED** |
-| 13 | Force building | A credit Allocation (60–100) buys 1 mech + pilot and up to 5 Elites; Grunts fill the remaining slots | **LOCKED** |
-| 14 | Replacement mech | A surviving pilot can call in a replacement mech | **LOCKED** |
-| 15 | Reinforcements | Come from pre-built reserves; Grunt reserves are unlimited. Three ways to arrive (§5). | **LOCKED** |
-| 16 | Customization | Pilots fully custom. Elites: their profile + 1 kit. Grunts: one template each, no customization. | **LOCKED** |
-| 17 | Cards | Unit cards, weapon/gear cards, mech component cards | **LOCKED** |
-| 18 | Costing | Small numbers; same price means roughly the same power | **LOCKED** |
-| 19 | Victory | Objectives, not body count | **LOCKED** |
-| 20 | Mode | PvP, plus PvPvE (both players vs each other and AI-run hostiles) | **LOCKED** |
-| 21 | Armor and damage model | Waiting on your thinking | **PARKED** |
+| 4 | Reactions | N5 AROs (1 die). Full-Burst reactions come from N5 **Suppressive Fire** (replaces our Overwatch idea). Dodge per N5. | **LOCKED** |
+| 5 | Board | 36"×36", very dense terrain | **LOCKED** |
+| 6 | Bases | Deliberately size-agnostic: 25, 28.5, and 32mm count as the same | **LOCKED** |
+| 7 | TAG line of sight | True line of sight to the model | **LOCKED** |
+| 8 | Force cap | 1 TAG or pilot + 10 infantry on the table per side | **LOCKED** |
+| 9 | Allocation | 60–100 credits, simpler than N5 points | **LOCKED** |
+| 10 | Grunts | 0 credits; shared profile; one equipment template each | **LOCKED** |
+| 11 | Elites | Up to 5 per company, *including* reserves. Cap can grow by pre-spending CP. Profile + 1 kit. | **LOCKED** |
+| 12 | Pilots | Fully custom. Free mount/dismount. Eject test. Can jockey enemy TAGs. | **LOCKED** |
+| 13 | Replacement TAG | Stock lineup costed in CP, not credits. Called in by a surviving pilot. | **LOCKED** |
+| 14 | Reinforcement | Paid drop pod (CP), else free Rally out of enemy sight, else your deployment zone. The 10-model cap is the only throttle. | **LOCKED** |
+| 15 | Fireteams | Grunt fireteams, players can mix and match. Activate in the Grunt phase. | **LOCKED** (reinforcing them is OPEN) |
+| 16 | Cards | Unit cards, weapon/gear cards, TAG component cards | **LOCKED** |
+| 17 | Victory | Objectives, not body count | **LOCKED** |
+| 18 | Mode | PvP and PvPvE | **LOCKED** |
 
 ---
 
-## 1. Design pillars — PROPOSED
+## 1. What this project is
 
-1. **Crunch at the workbench, speed at the table.** Every build compiles down to a short unit card plus component cards.
-2. **Combined arms is mandatory.** The mech owns open lanes. Infantry own dense terrain and are the main threat to the mech up close.
-3. **Customization scales with importance.** *(Revised.)* The pilot and mech are fully built. Elites are tuned. Grunts are company standard issue.
-4. **Near-future hardware.** Ballistics are reliable workhorses. Lasers are experimental: accurate, but hot and temperamental.
-5. **Big moments.** Mechfall, rodeos, orbital strikes, ejections, and Core abilities should happen every game.
+### Identity
+A mercenary-company game set in Infinity's universe. Players build a company to their heart's content:
+- a **custom TAG** assembled from component cards,
+- a **custom pilot**,
+- a pool of **Elite specialists** modeled on the specialists in standard Infinity armies,
+- **Grunts** as standard issue.
+
+Infinity's own lore already has mercenary companies, so the premise fits the setting.
+
+### Telling it apart from TAG Raid
+*Infinity Deathmatch: TAG Raid* is an **official Corvus Belli product**, not a fan project:
+- 2–4 players, battle-royale style.
+- TAGs are the main characters.
+- Runs on the CodeOne engine.
+- Players are mining corporations in Khurland.
+- An N4 Deathmatch mode adds 2 Heavy Infantry per player.
+
+| | TAG Raid | This project |
+|---|---|---|
+| Format | 2–4 player free-for-all | 1v1, or 1v1 plus AI hostiles (PvPvE) |
+| Focus | TAGs are the stars | Combined arms: 1 TAG supporting up to 10 infantry |
+| Engine | CodeOne | Full N5 with a phased turn structure |
+| Building | Not confirmed whether TAGs can be customized (check before publishing) | TAGs built from components; custom pilots; specialist pool |
+| Unique systems | Neomaterial extraction, multiplayer | Reinforcements, drop pods, replacement TAGs, pilots who dismount and jockey enemy TAGs |
+
+### Fan-project hygiene — PROPOSED
+Not legal advice.
+
+- **Reference N5, don't reproduce it.** This document's diff-only structure already does that.
+- Write all new content (profiles, components, call-ins) in our own words.
+- Label the project unofficial and non-commercial. Use no Corvus Belli logos or art.
+- Corvus Belli runs a creator program for fan videos and animations (Corvus Creator Nest), but I found no published policy on fan *rules*. Consider contacting them before public release.
 
 ---
 
-## 2. Tone and setting — LOCKED
+## 2. Tone — LOCKED
 
 **"Grounded at the boots, satirical at the top."**
 
-- Each player commands a **mercenary company**.
-- The **Allocation** is how many credits the company is willing to commit to this contract, so army points are literally a budget.
-- Combat is brutal and personal. The corporate clients and orbital command are absurd and propaganda-soaked.
-- The pilot–mech bond is played straight.
+- Each player commands a mercenary company.
+- The Allocation is what the company is willing to commit to this contract.
+- Combat is brutal and personal. The clients and orbital command are absurd and propaganda-soaked.
+- The pilot–TAG bond is played straight.
 
 ---
 
-## 3. Scale, bases, line of sight, terrain
+## 3. Changes from N5 (the diff)
 
-### Infantry — LOCKED
-- Standard troopers on 25mm bases. Heavy armored troopers on 40mm bases.
-- Infinity's silhouette system decides line of sight for infantry.
-
-### Mechs — LOCKED: true line of sight to the model
-Mechs come from several games and in several sizes, so line of sight is checked against the model itself.
-
-Mech base sizes to support:
-
-| Source game | Mech base | Notes |
-|---|---|---|
-| Infinity (TAGs) | 55mm | |
-| BLKOUT (Dusters) | 40–60mm | per the BLKOUT rulebook |
-| Arsenal: Fireteam (MCVs) | 75mm | |
-
-**PROPOSED:** any mech base from 40mm to 75mm is legal. Use the base the model was sold on. Base size doesn't affect stats.
-- Because line of sight is checked against the model, base size only changes the mech's footprint: how it fits through gaps, and how many troopers can get into base contact for a rodeo.
-- Playtest watch: does a small base give an edge in dense terrain?
-
-**OPEN:** Arsenal's infantry ship on 32mm bases. Do we allow 25–32mm as "standard infantry," or require rebasing?
-
-### Terrain — PROPOSED
-With no weapon ranges, line of sight is the only thing limiting fire, so terrain does the work that range would.
-
-- Very dense, multi-level.
-- No clear line of sight longer than about 18".
-- **Mech lanes:** at least 4" wide, so a 75mm base fits. They are staggered or bent so they never form a straight board-length firing lane.
-- Infantry can enter and climb buildings; mechs can't.
-
-### Weapon range — LOCKED: no range requirements
-Weapons differ through Burst, Damage, and keywords.
-
-**PROPOSED:** allow range *bonuses*, never requirements. For example:
-- **Close:** +3 to the Target Number within 8" (shotguns, SMGs).
-- **Steady:** +3 if the shooter didn't move this activation (snipers).
-
----
-
-## 4. Force building
-
-### Allocation — LOCKED
-- Players agree an **Allocation** of credits. Suggested sizes: **60** (small) and **100** (standard).
-- Costs are small whole numbers, and **same price means roughly the same power**.
-- **PROPOSED:** most items cost 1, 2, or 3 credits (price bands).
-
-### Company composition
-
-| Slot | Limit | Customization | Status |
-|---|---|---|---|
-| **Pilot + mech** | 1 on the table | Pilot fully custom. Mech assembled from component cards. | **LOCKED** |
-| **Replacement mech** | Called in by a surviving pilot | See open question 1 | OPEN |
-| **Elites** | Up to 5 | Fixed profile + 1 extra piece of kit | **LOCKED** |
-| **Grunts** | Fill the rest of the 10 infantry slots | Each picks one template; nothing else | **LOCKED** |
-
-On-table cap: **1 mech or pilot + 10 infantry**. **LOCKED**
-
-**PROPOSED:** grunts cost 0 credits; they're the company's standard issue. Credits go into the mech, the pilot, and Elites. The real trade-off is credits *and* infantry slots. Every Elite you take is one fewer free Grunt.
-
-Illustrative 100-credit company (prices are placeholders, not balanced):
-
-| Item | Credits |
-|---|---|
-| Medium chassis + components | 26 |
-| Pilot + perks | 6 |
-| 4 Elites with kit | 36 |
-| Reserve mech (if replacements must be bought; see open question 1) | 20 |
-| 1 reserve Elite | 9 |
-| 6 Grunts (two fireteams of 3) | 0 |
-| **Total** | **97** |
-
-### Cards — LOCKED
-- **Unit cards:** pilot, each Elite profile, each Grunt template.
-- **Weapon and gear cards:** for pilots, Elites, and the mech.
-- **Mech component cards:** a chassis card plus component cards. Lay them out together and they form the mech's profile.
-
----
-
-## 5. Lethality and reinforcement
-
-**LOCKED:** Infinity-level lethality. A trooper caught without cover, unable to respond, is dead.
-
-**PROPOSED** (carried over; not yet discussed):
-- **Doomed:** a mech at 0 Structure keeps fighting until the next hit destroys it.
-- The pilot may **Eject**, which places the Pilot model on the table.
-
-### Reserves — LOCKED
-- Reinforcements come from **pre-built reserves**.
-- **Grunt reserves are unlimited**, at least until playtesting says otherwise.
-
-### Arrival methods — LOCKED
-All reinforcements arrive in the **Command phase**. Choose one:
-
-1. **Drop pod:** anywhere on the board. It scatters and damages whatever it lands on.
-2. **Infiltrate:** within 6" of a friendly unit and out of line of sight of every enemy.
-3. **Standard deployment:** in your own deployment zone. Use this only if neither of the other two is possible.
-
-### Replacement mech — LOCKED (details OPEN)
-- The surviving pilot places a **Mechfall** beacon during their activation.
-- The mech drops in the next Command phase and crushes anything under it.
-
-### Throttle — OPEN
-With unlimited Grunts, what limits the flow of reinforcements? Options:
-- **(a)** Free. Dead Grunts return next Command phase.
-- **(b)** Each reinforcement costs Command Points.
-- **(c)** A per-round limit.
-
----
-
-## 6. Activation and reactions
-
-### Phases — LOCKED
-Within each phase, players alternate activations. If one side runs out of units in a phase, the other side activates the rest of theirs one after another.
+### 3.1 Round structure — LOCKED
+N5's player turns and Order pool are **replaced** by rounds with four phases. Inside each phase, players alternate activations. If one side runs out of units in a phase, the other side activates the rest of theirs one after another.
 
 | # | Phase | Who acts | What happens |
 |---|---|---|---|
-| 1 | **Command** | Players; nothing on the board | Initiative roll-off. Gain Command Points. Call-ins and Mechfall land. Reinforcements arrive. Core meters +1. Cleanup. |
-| 2 | **Pilot** | The mech, or a dismounted pilot | The pilot activates, and the mech they're in activates with them |
-| 3 | **Elite** | Elite troopers | Each activates individually |
-| 4 | **Grunt** | Grunt fireteams | Each fireteam activates as one unit |
+| 1 | **Command** | Players; nothing on the board | Initiative. Gain Command Points (CP). Reinforcements, drop pods, and Mechfall land. Upkeep. |
+| 2 | **Pilot** | The TAG, or a dismounted pilot | The pilot activates, and the TAG they're in activates with them |
+| 3 | **Elite** | Elites | Each activates individually |
+| 4 | **Grunt** | Grunts and fireteams | Each Grunt or fireteam activates as one unit |
 
-**PROPOSED:**
-- Troopers and pilots get 2 actions each when they activate.
-- The mech gets 3 actions.
-- Beacons placed during a round land in the *next* Command phase. The enemy gets the rest of the round to get clear.
+**Translating N5 timing — PROPOSED:**
+- For the length of an activation, the activating player counts as the **active player** for every N5 rule that refers to the active or reactive turn.
+- Every enemy model counts as **reactive** and may ARO per N5.
 
-### Reactions — LOCKED
+### 3.2 Orders per activation — PROPOSED
+One N5 Order is two short skills (e.g. move and shoot), which equals two actions in Stargrave. So one activation = **one Order**.
 
-| Reaction | Who | Cost | Effect |
-|---|---|---|---|
-| **Return Fire** | The model being attacked | Free, once per attack | Shoot back with **1 die**. Rolled face-to-face against the attack. |
-| **Overwatch** | Any model | 1 action | Take an Overwatch token. Spend it to react with the weapon's **full Burst** when an enemy acts in line of sight. |
+| Who | Orders per activation |
+|---|---|
+| Pilot or TAG | 2 |
+| Elite | 1 |
+| Grunt or fireteam | 1 (a fireteam spends one Order for the whole team, as in N5) |
 
-Alternative considered: The Drowned Earth-style reactions (spend an unspent action point). Overwatch was chosen instead.
+- An Elite's edge is acting earlier (its phase), better stats, and special skills, not extra Orders.
+- Rough order count: about 12 Orders per side per round. Over **3 rounds**, that's close to N5's per-game order count. Three rounds also means N5 missions port over with little change.
+- **Alternative:** Elites get 2 Orders. Elites matter more, but games run longer.
 
-**PROPOSED:**
-- The Overwatch token lasts until used or until the model activates again. Grunts setting Overwatch late in a round then threaten the enemy's Pilot and Elite phases in the next round.
-- Add **Dodge** as an alternative free response to Return Fire. It wins the same way and lets the model move 2".
+### 3.3 Reactions — LOCKED
+- N5 AROs are the baseline.
+- Full-Burst reaction comes from N5 **Suppressive Fire**.
+- **PROPOSED:** Suppressive Fire lasts until the model's next activation. A Grunt that sets it in the Grunt phase then threatens the enemy's Pilot and Elite phases in the next round.
 
-Simulated d20 duels (Burst 3 attacker, Skill 12, one-wound targets):
+### 3.4 Force building — LOCKED (exact values PROPOSED)
 
-| Situation | Free 1-die Return Fire | Overwatch (full Burst) |
+| Slot | Rule |
+|---|---|
+| **Allocation** | 60 or 100 credits, agreed before the game |
+| **Pilot + TAG** | One. Pilot fully custom, TAG assembled from component cards. |
+| **Elites** | Up to 5, including reserves. Fixed profile + 1 kit. |
+| **Elite cap expansion** | Pre-spend CP before the game to raise the cap; that CP isn't gained in round 1. Exchange rate is OPEN. |
+| **Grunts** | 0 credits. Fill the remaining infantry slots. |
+| **On-table cap** | 1 TAG or pilot + 10 infantry |
+
+**PROPOSED:** seed Elite and component prices from N5 points (roughly N5 points ÷ 3, rounded). Then simplify into price bands where equal cost means roughly equal power.
+
+### 3.5 Reinforcement — LOCKED
+
+All reinforcements arrive in the **Command phase**. The 10-model cap is the only throttle. Use the first method that applies:
+
+1. **Drop pod (costs CP):** anywhere on the board. It scatters and damages whatever it lands on.
+   - **PROPOSED:** reuse N5's airborne-deployment scatter procedure, and add the impact damage.
+2. **Rally (free):** within 6" of a friendly unit and out of line of sight of every enemy.
+   - *Renamed from "Infiltrate" to avoid clashing with the N5 Infiltration skill.*
+3. **Deployment zone (free):** only if neither of the above is possible.
+
+- **Elites** reinforce only from reserves you built before the game.
+- **Grunt** reserves are unlimited.
+
+### 3.6 Pilots and TAGs — LOCKED (details PROPOSED)
+
+| Rule | Detail |
+|---|---|
+| **Mount / dismount** | Free with any movement skill |
+| **Eject** | When the TAG is destroyed, the pilot takes a test to eject. **PROPOSED:** a PH roll. |
+| **Jockey** | Pilots only (for now). End any movement in base contact with an enemy TAG, then make a face-to-face roll between the two pilots. **PROPOSED:** WIP against WIP. |
+| **Replacement TAG** | Choose from a **stock lineup** of TAGs, each costed in CP and paid during the game. Only a surviving pilot can call one, via a Mechfall beacon. It lands next Command phase and crushes anything under it. |
+
+**OPEN:** can a pilot climb into an enemy TAG whose pilot has dismounted? Stealing an unmanned TAG would make dismounting a real risk.
+
+### 3.7 Command Points — PROPOSED
+
+CP is spent on:
+- drop pods,
+- replacement TAGs,
+- Elite cap expansion,
+- call-ins (§4.5).
+
+**OPEN:**
+- How CP is generated each round. Suggestion: a base amount, plus a bonus while your Lieutenant lives.
+- Whether CP **replaces N5 Command Tokens** outright. We need to check every N5 rule that spends Command Tokens and map each one to CP.
+
+### 3.8 Bases and line of sight — LOCKED
+
+- **Infantry:** 25, 28.5, and 32mm bases count as identical. 40mm for heavy armor. Infantry use N5 silhouettes.
+- **TAGs:** any base the model shipped on. Infinity TAGs use 55mm, BLKOUT Dusters 40–60mm, Arsenal MCVs 75mm. We *suggest* smaller bases for light TAGs and larger for heavy, but the rules are deliberately agnostic.
+- **TAG line of sight:** checked against the model itself.
+- If the two players' base sizes differ, they agree how to handle it before the game.
+
+### 3.9 N5 rules that need translating — OPEN
+
+| N5 rule | Problem | Starting suggestion |
 |---|---|---|
-| Both in the open | Target dies 70%, attacker dies 22% | 45% / 45% |
-| Target in cover (−3 to hit it), attacker exposed | 56% / 33% | **29% / 64%** |
-
-Overwatch from cover flips the fight. That's why it's worth an action.
-
----
-
-## 7. Dice resolution — LOCKED: d20 roll-under
-
-1. Roll d20s equal to the weapon's **Burst**.
-2. Each die that rolls ≤ the **Target Number (TN)** succeeds. TN = Skill + modifiers.
-3. A die that rolls exactly the TN is a **Crit**.
-4. **Face-to-face:** when both sides roll, a success cancels every opposing success that rolled lower. Equal rolls cancel each other. A Crit beats anything that isn't a Crit.
-
-**PARKED:** armor, damage, and how hits become wounds or Structure loss. Waiting on your thinking.
+| Order pool; Regular / Irregular orders | There's no Order pool any more | Drop them |
+| Impetuous | No free impetuous orders | The model must move toward an enemy in its activation, or drop the rule |
+| Lieutenant / Loss of Lieutenant | Loss of Lieutenant punishes the Order pool, which no longer exists | Lieutenant = an Officer Elite. Losing them reduces CP generation. |
+| Retreat! | With unlimited Grunts, a casualty threshold makes little sense | Drop it |
+| Command Tokens | Overlap with CP | See §3.7 |
+| Specialist troops | ITS mission objectives need Specialists | Elites count as Specialists. Can Grunts ever hold objectives? |
 
 ---
 
-## 8. Mech construction — PROPOSED
+## 4. Our content
 
-The mech is assembled from **component cards**.
+### 4.1 TAG builder — PROPOSED
+This is the main reason the project exists. Infinity's existing TAG profiles become **chassis**, and their weapon loadouts become **mount options**.
 
 1. **Chassis card**
    - Weight class and manufacturer.
-   - Base stats, hardpoint layout, Capacity, Chassis Trait, and a **Core** ability.
-2. **Weapon component cards:** Light, Medium, and Heavy mounts. A mount takes a weapon of its size or smaller.
-3. **System component cards:** jump jets, ECM, shield, point defense, smoke, anti-rodeo countermeasures.
-4. **Capacity:** keeps each build coherent. Credits keep the whole force balanced.
-5. **Core:** the meter fills +1 per round and +1 when damaged. Fire it once when full.
+   - Base stats in N5 attributes: MOV, BS, ARM, BTS, STR, and the rest.
+   - Hardpoint layout and Capacity.
+2. **Weapon component cards:** Light, Medium, and Heavy mounts, using N5 weapons.
+3. **System component cards:** N5-style equipment such as ECM and jump systems, plus new ones where N5 has a gap.
+4. **Capacity** keeps each build coherent. Credits keep the whole force balanced.
 
-**Heat:**
-- Lasers, boosting, and overcharging build Heat. Going over Heat Cap triggers overheat effects.
-- Ballistics run cool, but heavy ballistics have Limited ammo.
+### 4.2 Pilots — PROPOSED
+- A pilot build is skills + sidearm + 1–2 gear.
+- The pilot fights as a 25mm infantry model when dismounted.
 
-Launch scope idea: 6 chassis, 2 per weight class.
+### 4.3 Elites — PROPOSED
+A large specialist pool modeled on standard Infinity specialists: Hacker, Doctor, Engineer, Forward Observer, Paramedic, Sniper, Missile Launcher, Officer/Lieutenant, and Heavy Infantry on a 40mm base.
 
----
+Each Elite is a fixed profile plus **1 kit**.
 
-## 9. Pilots, Elites, Grunts
+### 4.4 Grunts and fireteams — PROPOSED
+**One shared line-trooper profile.** Templates change only equipment:
 
-### Pilots — LOCKED: fully customizable
-- **PROPOSED:** a pilot build is perks + sidearm + 1–2 gear.
-- Gear is pilot-style kit from Titanfall: grapple, cloak, stim, jump kit.
-- The pilot fights as a 25mm model when dismounted.
-- Pilot perks are where mech-handling skills live.
-
-### Elites — LOCKED: fixed profile + 1 kit
-**PROPOSED roles:** Officer/Uplink, Marksman, Breacher, Tech, Medic, AT Specialist, Heavy (40mm).
-
-### Grunts — LOCKED: one template each, no customization
-**PROPOSED template list:**
-1. **Rifleman**
-2. **Gunner** (LMG)
-3. **Grenadier**
-4. **AT Gunner**
-5. **Corpsman**
-
-**PROPOSED fireteam rules:**
-- 3–5 Grunts, no duplicate templates except Rifleman.
-- The team is fully capable while intact. Each loss removes a capability: lose the AT Gunner and the team can't threaten the mech.
-- Reinforcements refill the missing template, ideally by Infiltrating within 6" of the team.
-
-**OPEN** (Infinity-adjacent mechanics):
-- Coherency distance.
-- Whether every member gets actions, or a leader acts and the others follow.
-- Any bonus for a full team.
-
----
-
-## 10. Command Points, call-ins, combos — PROPOSED
-
-**Command Points (CP)**
-- Gained in the Command phase: a base amount, plus 1 for each living Officer/Uplink Elite.
-- Spent on call-ins (and on reinforcements, if throttle option (b) is chosen).
-
-**Call-ins** (Helldivers stratagems)
-1. An Officer/Uplink Elite places a beacon during their activation.
-2. The call-in lands in the next Command phase, after scatter.
-3. Friendly fire is on.
-
-| Call-in | Effect |
+| Template | Main equipment |
 |---|---|
-| Orbital strike | Damages all models within X" of the beacon |
-| Supply drop | Resupplies Limited ammo; removes Heat |
-| Support-weapon drop | A heavy weapon any trooper can pick up |
-| **Mechfall** | Replacement mech; only a surviving pilot can call it |
+| Rifleman | Combi Rifle |
+| Gunner | Spitfire |
+| Grenadier | Light Grenade Launcher |
+| AT Gunner | Panzerfaust |
+| Corpsman | Paramedic + Combi Rifle |
 
-**Primers and Detonators** (from Anthem)
-- There are 3–4 status types: *Burning*, *Shocked*, *Marked*.
-- Primer weapons apply a status token. Detonator weapons consume it for a bonus effect.
-- Combos work across units: Grunts prime, mech detonates.
+**Fireteams:**
+- 3–5 Grunts, with no duplicate templates except Rifleman.
+- Fireteams are optional.
+- Use N5 fireteam rules unless we decide otherwise.
 
-Area effects use "all models within X inches of a point." There are no templates.
+**OPEN:**
+- How a fireteam gets reinforced. Options:
+  - **(a)** A Rally arrival within 6" may join the team.
+  - **(b)** Teams are fixed at deployment. Survivors and reinforcements act as individuals.
+  - **(c)** Something else after more thought.
+- Does "mix and match" mean an Elite can join a Grunt fireteam? If so, that Elite activates in the Grunt phase, giving up its early activation.
+
+### 4.5 Call-ins and other additions — REVIEW
+These were our ideas before the N5 pivot. Some may now be redundant.
+
+| Idea | What N5 already offers | Suggestion |
+|---|---|---|
+| Orbital call-ins (strikes, supply, support-weapon drops) | Nothing equivalent | **Keep.** A key difference from TAG Raid. |
+| TAG Heat | Nothing; N5 doesn't track heat | Cut, unless the TAG builder needs an in-game tradeoff |
+| Core abilities (TAG ultimates) | Nothing | Keep as a chassis feature, or cut for simplicity |
+| Primers and Detonators | N5 states and special ammo likely cover some of this (check N5) | Cut. Lean on N5 states instead. |
+| Experimental lasers | Check the N5 weapon list | Add only where N5 has a gap |
 
 ---
 
-## 11. Components — PROPOSED
+## 5. Components
 
-- **Dice:** about 6 d20s per player, in two colors (active and reactive).
-- **Measuring:** a tape measure. Only movement, area effects, and the 6" Infiltrate check need measuring.
-- **Tokens:**
-  - Activated
-  - Overwatch
-  - Status types (3–4)
-  - Doomed
+- **Base game:** the N5 rules.
+- **Dice and tokens:** d20s and N5 markers, plus:
+  - Command Point (CP) tokens
   - Beacons
-  - Objectives
-- **Mech tracking:** a dry-erase sleeve or dials for Structure, Heat, and Core.
-- **Cards:** unit, weapon/gear, mech component, mission, and a one-page keyword sheet.
-- **Miniatures per side:** 1 mech, 1 pilot, up to 10 infantry, plus reserves.
+  - Drop pod markers
+- **Cards:**
+  - Unit cards
+  - Weapon and gear cards
+  - TAG component cards
+  - Stock replacement-TAG cards
+  - Mission cards
+- **Miniatures per side:** 1 TAG, 1 pilot, up to 10 infantry, plus reserves.
 - **Terrain:** a very dense 36"×36" board.
 
-**Tooling note:** keep chassis, components, weapons, gear, and templates as data tables. A list builder can then validate Allocations and print cards.
+**Tooling note:** keep chassis, components, profiles, and templates as data tables. A list builder can then validate Allocations and print cards.
 
 ---
 
-## 12. Open questions
+## 6. Open questions
 
-1. **Replacement mech:** a second mech bought in advance as a reserve, or the same build reissued for free (or for CP)?
-2. **Grunts:** free filler (my proposal), and what throttles their reinforcements (§5)?
-3. **Elite cap:** 5 per company *including* reserves, or 5 on the table at once?
-4. **Pilots:** can they get out of the mech voluntarily (full Titanfall), or only by ejecting?
-5. **Infantry bases:** allow Arsenal's 32mm infantry bases as standard?
-6. **Dodge:** keep it as a free alternative to Return Fire?
-7. **PvPvE:** when do AI hostiles act? Their own phase, or during the Command phase? *(Later.)*
-8. **Armor and damage model:** PARKED until you're ready.
+1. **Orders per activation:** Pilot 2 / Elite 1 / Grunt 1 (my recommendation), or give Elites 2?
+2. **Rounds:** 3, to match N5 and reuse its missions?
+3. **Our additions** (§4.5): which survive the N5 pivot?
+4. **Objectives:** are Elites the only Specialists, or can some Grunts hold objectives?
+5. **Jockeying:** WIP vs WIP? Can a pilot steal an *unmanned* TAG?
+6. **Fireteams:** can Elites join Grunt fireteams? How do teams get reinforced?
+7. **CP:** how is it generated, what is the exchange rate for Elite cap expansion, and does it replace Command Tokens?
