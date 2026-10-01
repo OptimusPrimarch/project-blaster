@@ -1,4 +1,4 @@
-# Project Blaster — Infinity N5 Mercenary Game Mode (v0.6 draft)
+# Project Blaster — Infinity N5 Mercenary Game Mode (v0.7 draft)
 
 A **non-commercial, fan-made game mode for Infinity N5**, intended as a love letter to Corvus Belli.
 
@@ -23,15 +23,15 @@ Status tags:
 | 1 | Baseline | Infinity N5: dice, attributes, weapons, range bands, AROs, armor, states | **LOCKED** |
 | 2 | Identity | Mercenary-company game mode in the Infinity universe. Non-commercial. No satire unless the setting supports it. | **LOCKED** |
 | 3 | Rounds | 3 | **LOCKED** |
-| 4 | Turn structure | Phases: Pilot → Elite → Tactical → Reinforcement. In each phase, one player takes a standard active turn, then the other. Only models of that phase's type spend Orders. | **LOCKED** |
-| 5 | Order economy | Orders spent in early phases aren't available in later ones | **LOCKED** (mechanics PROPOSED, §2) |
+| 4 | Turn structure | Phases: Pilot → Elite → Trooper → Reinforcement. In each phase, one player takes a standard active turn, then the other. Only models of that phase's type spend Orders. | **LOCKED** |
+| 5 | Order economy | Option C: the Regular pool is recounted at the start of each phase, minus Orders already spent this round. Troopers are Irregular. The Lieutenant Order can be spent in any phase. | **LOCKED** (§2.1) |
 | 6 | Lieutenant | Costs credits on any eligible model, the pilot included. NCO costs more. Using the Lieutenant Order reveals who the Lieutenant is, which is the counterweight. | **LOCKED** |
 | 7 | Command Tokens | Fixed N5 pool, slightly enlarged, so they dwindle over the game. Expanded uses. | **LOCKED** |
 | 8 | Suppressive Fire | N5 state, unchanged | **LOCKED** |
 | 9 | Force cap | 1 TAG or pilot + 10 infantry on the table | **LOCKED** (see open question 3) |
 | 10 | Allocation | 60–100 credits | **LOCKED** |
 | 11 | Elites | Up to 5, including reserves. Profile + 1 kit. Cap expandable with Command Tokens. A second pilot is an expensive Elite option. | **LOCKED** |
-| 12 | Grunts | 0 credits; shared profile; equipment templates. Corpsman and Spotter are specialists. | **LOCKED** |
+| 12 | Troopers | 0 credits; Irregular; shared profile; equipment templates. Corpsman and Spotter are specialists. Renamed from "Grunts," which is an existing Infinity unit. | **LOCKED** |
 | 13 | Fireteams | Dropped | **LOCKED** |
 | 14 | Reinforcement | Arrive in the Reinforcement phase and act with their own Orders. Arriving isn't an action. | **LOCKED** (leaning) |
 | 15 | Arrival methods | Drop pod (Command Token), else Deployment (Tactical), else deployment zone | **LOCKED** |
@@ -55,7 +55,7 @@ Status tags:
 - A **custom TAG**, assembled from chassis, components, and a Signature slot.
 - A **custom pilot**.
 - A pool of **Elite specialists**, modeled on the specialists in standard Infinity armies.
-- **Grunts** as standard issue.
+- **Troopers** as standard issue.
 
 How it differs from *Infinity Deathmatch: TAG Raid*, Corvus Belli's official TAG-centered free-for-all:
 
@@ -75,23 +75,40 @@ In every phase, the initiative player takes a standard N5 active turn, and the o
 
 | # | Phase | Who spends Orders | Notes |
 |---|---|---|---|
-| 0 | **Start of round** *(PROPOSED)* | Nobody | Initiative. **Order Count for the whole round** (§2.1). |
+| 0 | **Start of round** | Nobody | Initiative |
 | 1 | **Impetuous** *(PROPOSED)* | Impetuous troops | First, regardless of phase, per your earlier leaning |
 | 2 | **Pilot** | Pilots and the TAG they're in | Includes a second pilot taken as an Elite |
 | 3 | **Elite** | Elites | |
-| 4 | **Tactical** | Grunts | The standard N5 turn, so N5 rules apply here unchanged |
+| 4 | **Trooper** | Troopers | The standard N5 turn. Renamed from "Tactical" so it isn't confused with N5's Tactical Phase, the start-of-turn bookkeeping step. |
 | 5 | **Reinforcement** | New arrivals | Arrivals deploy, then act with their own Orders. Arriving isn't an action. |
 
-### 2.1 Order economy — PROPOSED (my reading; confirm)
-"The more Orders you spend up front, the less you'll have in the coming phases" needs a shared pool that lasts across phases. My reading:
+### 2.1 Order economy — LOCKED: Option C, with Troopers Irregular
 
-- **Pilot and Elites are Regular.** They generate the pool.
-- **Grunts are Irregular.** Each keeps its own Order for the Tactical phase.
-- **The pilot's Tactical Awareness Order** is Irregular and belongs to the pilot.
-- **The pool is counted once, at the start of the round.** Today N5 counts Orders at the start of each player's turn. That step has to move, because the Pilot and Elite phases come before the standard turn.
-- Pool Orders left unspent carry down into later phases. Grunts can use them in the Tactical phase.
+| Source | Type | Spent by | When |
+|---|---|---|---|
+| Pilot | Regular (pool) | Whoever is eligible in the current phase | Any phase |
+| Each Elite | Regular (pool) | Whoever is eligible in the current phase | Any phase |
+| Pilot's Tactical Awareness | Irregular | The pilot (and their TAG) | Pilot phase |
+| Lieutenant Order | Special | The Lieutenant (N5) | **Any phase** (the exception) |
+| Each Trooper | Irregular | That Trooper only | Trooper phase |
 
-**The trade-off this creates:** the Pilot phase can pour pool Orders into the TAG, but every Order it takes is one an Elite or Grunt doesn't get. This brings back the standard Infinity choice of concentrating Orders on one model. So counter-TAG tools have to be solid: AT weapons, hacking, and jockeying.
+**Available pool at the start of each phase** = Regular Orders from your surviving Pilot and Elites − Regular Orders you've already spent this round. It can't go below 0.
+
+- Leftover pool Orders carry down to the Trooper phase. N5 lets Irregular troopers receive Regular Orders from the pool.
+- The TAG's ceiling in the Pilot phase is: the pool (pilot + Elites) + Tactical Awareness, + the Lieutenant Order if the pilot is the Lieutenant. With 5 Elites that's up to 7–8 Orders. Every one of them leaves an Elite standing idle.
+- Bookkeeping stays small: the pool is at most about 6 Orders, because Troopers track their own.
+
+**PROPOSED: token method (same result, no arithmetic)**
+1. At the start of the round, take one Order token for each Regular model.
+2. Discard a token whenever you spend a Regular Order.
+3. At the start of each phase, discard one unspent token for each Regular model you lost since the last phase began. If you have no tokens left, you lose nothing more.
+
+**PROPOSED: count at the start of the phase, for both players at once** (as you described). The player who goes second in a phase keeps the Orders of any models the first player just killed. This offsets going second. If each player counted at the start of their own turn, a first-player TAG would cost the opponent both models *and* Orders before they could act.
+
+**Watch: initiative stacking.** If the initiative player goes first in *every* phase, their TAG, Elites, and Troopers always strike first. Options:
+- Keep it.
+- Alternate who goes first each phase: A-B, then B-A, then A-B. This gives B two turns in a row across the phase break.
+- Have the player who went second in the Pilot phase go first in the Elite phase.
 
 **Watch:** N5 effects that last "until your next turn" (Suppressive Fire, for example). Proposed rule: a player's *turn* is their part of any phase, and such effects last until the start of that player's next **round**.
 
@@ -115,7 +132,7 @@ In every phase, the initiative player takes a standard N5 active turn, and the o
 | **Pilot + TAG** | One. Pilot fully custom. TAG = chassis + components + Signature. |
 | **Elites** | Up to 5, including reserves. Fixed profile + 1 kit. Cap expandable with Command Tokens. |
 | **Second pilot** | An expensive Elite option. They can spend Command Tokens to call in a stock TAG as early as the first Pilot phase. This is intended; both players have the option. |
-| **Grunts** | 0 credits. Fill the remaining infantry slots. |
+| **Troopers** | 0 credits. Fill the remaining infantry slots. |
 | **On-table cap** | 1 TAG or pilot + 10 infantry (see open question 3) |
 
 **PROPOSED:** seed Elite and component prices from N5 points (roughly N5 points ÷ 3, rounded), then simplify into price bands where equal cost means roughly equal power.
@@ -134,7 +151,7 @@ In every phase, the initiative player takes a standard N5 active turn, and the o
 
 **Reserves:**
 - **Elites** come only from reserves built before the game.
-- **Grunt** reserves are unlimited.
+- **Trooper** reserves are unlimited.
 
 **Replacement TAG:**
 - Choose from a stock lineup, each TAG costed in Command Tokens.
@@ -167,11 +184,11 @@ In every phase, the initiative player takes a standard N5 active turn, and the o
 
 ---
 
-## 7. Elites and Grunts — LOCKED (lists PROPOSED)
+## 7. Elites and Troopers — LOCKED (lists PROPOSED)
 
 **Elite pool:** Hacker, Doctor, Engineer, Forward Observer, Paramedic, Sniper, Missile Launcher, an Officer who can be Lieutenant, Heavy Infantry, and a **second pilot**.
 
-**Grunts:** one shared profile. Templates change equipment only.
+**Troopers:** one shared profile. Templates change equipment only.
 
 | Template | Equipment | Specialist? |
 |---|---|---|
@@ -226,12 +243,15 @@ Build the **New Recruit catalogue as the single source of truth**. Generate prin
 | "Rally" reinforcement | Replaced by Deployment (Tactical) |
 | Fireteams | Simplicity |
 | Free Lieutenant on the pilot | The Lieutenant now costs credits |
+| Order economy options A and B | Chose C, with Troopers Irregular |
+| The names "Grunt" and "Tactical" (phase) | Clash with an existing Infinity unit and with N5's Tactical Phase |
 
 ---
 
 ## 10. Open questions
 
-1. **Order economy:** is §2.1 the right reading? Pilot and Elites Regular, Grunts Irregular, pool counted once at the start of the round.
-2. **Impetuous:** first in the round, before the Pilot phase?
-3. **TAG cap:** with a second pilot, can **two TAGs** be on the table at once? Or can the second pilot only call one in after the first TAG is lost?
-4. **Catalogue hosting:** a new public repo, or make this one public later?
+1. **Initiative:** does the initiative player go first in every phase, or does it alternate (§2.1)?
+2. **Order counting:** count at the start of the phase for both players at once (my recommendation), or at the start of each player's own turn?
+3. **Impetuous:** first in the round, before the Pilot phase?
+4. **TAG cap:** with a second pilot, can **two TAGs** be on the table at once? Or can the second pilot only call one in after the first TAG is lost?
+5. **Catalogue hosting:** a new public repo, or make this one public later?
