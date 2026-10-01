@@ -1,4 +1,4 @@
-# Project Blaster — Infinity N5 Mercenary Game Mode (v0.7 draft)
+# Dogs of War — Infinity N5 Mercenary Game Mode (v0.8 draft)
 
 A **non-commercial, fan-made game mode for Infinity N5**, intended as a love letter to Corvus Belli.
 
@@ -24,11 +24,13 @@ Status tags:
 | 2 | Identity | Mercenary-company game mode in the Infinity universe. Non-commercial. No satire unless the setting supports it. | **LOCKED** |
 | 3 | Rounds | 3 | **LOCKED** |
 | 4 | Turn structure | Phases: Pilot → Elite → Trooper → Reinforcement. In each phase, one player takes a standard active turn, then the other. Only models of that phase's type spend Orders. | **LOCKED** |
-| 5 | Order economy | Option C: the Regular pool is recounted at the start of each phase, minus Orders already spent this round. Troopers are Irregular. The Lieutenant Order can be spent in any phase. | **LOCKED** (§2.1) |
+| 5 | Order economy | Option C: the Regular pool is recounted at the start of each player's turn within a phase, minus Orders already spent this round. Tracked with tokens. Troopers are Irregular. The Lieutenant Order can be spent in any phase. | **LOCKED** (§2.1) |
+| 5a | Initiative | The initiative player goes first in every phase. Scenarios scored at the end of the round or game, plus AROs, offset the advantage (as in N5). | **LOCKED** |
+| 5b | Impetuous | First in the round, before the Pilot phase | **LOCKED** |
 | 6 | Lieutenant | Costs credits on any eligible model, the pilot included. NCO costs more. Using the Lieutenant Order reveals who the Lieutenant is, which is the counterweight. | **LOCKED** |
 | 7 | Command Tokens | Fixed N5 pool, slightly enlarged, so they dwindle over the game. Expanded uses. | **LOCKED** |
 | 8 | Suppressive Fire | N5 state, unchanged | **LOCKED** |
-| 9 | Force cap | 1 TAG or pilot + 10 infantry on the table | **LOCKED** (see open question 3) |
+| 9 | Force cap | 1 TAG or pilot + 10 infantry on the table. A second pilot (Elite) may also call in a reserve TAG, for most of your Command Tokens. | **LOCKED** |
 | 10 | Allocation | 60–100 credits | **LOCKED** |
 | 11 | Elites | Up to 5, including reserves. Profile + 1 kit. Cap expandable with Command Tokens. A second pilot is an expensive Elite option. | **LOCKED** |
 | 12 | Troopers | 0 credits; Irregular; shared profile; equipment templates. Corpsman and Spotter are specialists. Renamed from "Grunts," which is an existing Infinity unit. | **LOCKED** |
@@ -45,7 +47,7 @@ Status tags:
 | 23 | Board | 36"×36", very dense | **LOCKED** |
 | 24 | Victory | Objectives | **LOCKED** |
 | 25 | Mode | PvP and PvPvE | **LOCKED** |
-| 26 | List-building tool | New Recruit catalogue as the source of truth; cards generated from it later | **PROPOSED** (§8) |
+| 26 | List-building tool | New Recruit catalogue as the source of truth, hosted in a new public repo, **Dogs of War**. Cards generated from it later. | **LOCKED** (§8) |
 
 ---
 
@@ -76,7 +78,7 @@ In every phase, the initiative player takes a standard N5 active turn, and the o
 | # | Phase | Who spends Orders | Notes |
 |---|---|---|---|
 | 0 | **Start of round** | Nobody | Initiative |
-| 1 | **Impetuous** *(PROPOSED)* | Impetuous troops | First, regardless of phase, per your earlier leaning |
+| 1 | **Impetuous** | Impetuous troops | First in the round, regardless of phase |
 | 2 | **Pilot** | Pilots and the TAG they're in | Includes a second pilot taken as an Elite |
 | 3 | **Elite** | Elites | |
 | 4 | **Trooper** | Troopers | The standard N5 turn. Renamed from "Tactical" so it isn't confused with N5's Tactical Phase, the start-of-turn bookkeeping step. |
@@ -98,19 +100,14 @@ In every phase, the initiative player takes a standard N5 active turn, and the o
 - The TAG's ceiling in the Pilot phase is: the pool (pilot + Elites) + Tactical Awareness, + the Lieutenant Order if the pilot is the Lieutenant. With 5 Elites that's up to 7–8 Orders. Every one of them leaves an Elite standing idle.
 - Bookkeeping stays small: the pool is at most about 6 Orders, because Troopers track their own.
 
-**PROPOSED: token method (same result, no arithmetic)**
+**LOCKED: token method (same result, no arithmetic)**
 1. At the start of the round, take one Order token for each Regular model.
 2. Discard a token whenever you spend a Regular Order.
-3. At the start of each phase, discard one unspent token for each Regular model you lost since the last phase began. If you have no tokens left, you lose nothing more.
+3. At the start of **each of your turns** within a phase, discard one unspent token for each Regular model you lost since your previous turn. If you have no tokens left, you lose nothing more.
 
-**PROPOSED: count at the start of the phase, for both players at once** (as you described). The player who goes second in a phase keeps the Orders of any models the first player just killed. This offsets going second. If each player counted at the start of their own turn, a first-player TAG would cost the opponent both models *and* Orders before they could act.
+**LOCKED: each player counts at the start of their own turn within a phase,** as in N5. A first-player TAG that kills Elites also costs the opponent those Orders. AROs and scenario design keep this in check. *(We considered and rejected a simultaneous count for both players.)*
 
-**Watch: initiative stacking.** If the initiative player goes first in *every* phase, their TAG, Elites, and Troopers always strike first. Options:
-- Keep it.
-- Alternate who goes first each phase: A-B, then B-A, then A-B. This gives B two turns in a row across the phase break.
-- Have the player who went second in the Pilot phase go first in the Elite phase.
-
-**Watch:** N5 effects that last "until your next turn" (Suppressive Fire, for example). Proposed rule: a player's *turn* is their part of any phase, and such effects last until the start of that player's next **round**.
+**LOCKED: the initiative player goes first in every phase.** As in N5, scenarios scored at the end of the round or game offset the first-mover advantage.
 
 ---
 
@@ -131,9 +128,9 @@ In every phase, the initiative player takes a standard N5 active turn, and the o
 | **Allocation** | 60 or 100 credits |
 | **Pilot + TAG** | One. Pilot fully custom. TAG = chassis + components + Signature. |
 | **Elites** | Up to 5, including reserves. Fixed profile + 1 kit. Cap expandable with Command Tokens. |
-| **Second pilot** | An expensive Elite option. They can spend Command Tokens to call in a stock TAG as early as the first Pilot phase. This is intended; both players have the option. |
+| **Second pilot** | An expensive Elite option. They can spend **most of your Command Tokens** to call in a reserve TAG from the stock lineup, as early as the first Pilot phase. This allows two TAGs on the table. Intended; both players have the option. |
 | **Troopers** | 0 credits. Fill the remaining infantry slots. |
-| **On-table cap** | 1 TAG or pilot + 10 infantry (see open question 3) |
+| **On-table cap** | 1 TAG or pilot + 10 infantry. A reserve TAG called in by a second pilot is the only way to field a second TAG. |
 
 **PROPOSED:** seed Elite and component prices from N5 points (roughly N5 points ÷ 3, rounded), then simplify into price bands where equal cost means roughly equal power.
 
@@ -154,8 +151,8 @@ In every phase, the initiative player takes a standard N5 active turn, and the o
 - **Trooper** reserves are unlimited.
 
 **Replacement TAG:**
-- Choose from a stock lineup, each TAG costed in Command Tokens.
-- A pilot calls it in during the Pilot phase.
+- Choose from a stock lineup, each TAG costed in Command Tokens. Price them so a TAG takes **most of the pool**.
+- A pilot calls it in during the Pilot phase. This can be a surviving first pilot replacing a lost TAG, or a second pilot calling in a reserve TAG.
 - **PROPOSED:** it lands in that round's Reinforcement phase.
 
 **Calldowns:** orbital and aerial support, built on the Speedball baseline.
@@ -201,7 +198,7 @@ In every phase, the initiative player takes a standard N5 active turn, and the o
 
 ---
 
-## 8. List-building tool — PROPOSED: New Recruit first, cards later
+## 8. List-building tool — LOCKED: New Recruit first, cards later
 
 ### Recommendation
 Build the **New Recruit catalogue as the single source of truth**. Generate printable cards from it later.
@@ -224,8 +221,8 @@ Build the **New Recruit catalogue as the single source of truth**. Generate prin
 
 ### Hosting
 - New Recruit loads any GitHub repo with the .gst/.cat files **at the repo root**, via "Add or Remove games" → "Add from Github."
-- It probably needs to be a public repo.
-- Suggestion: a dedicated public repo for the catalogue. This repo stays the design workspace.
+- **LOCKED:** a new public repo, **Dogs of War**. GitHub names can't contain spaces, so the repo itself would be `dogs-of-war`.
+- This repo (`project-blaster`) stays the design workspace.
 
 ---
 
@@ -250,8 +247,13 @@ Build the **New Recruit catalogue as the single source of truth**. Generate prin
 
 ## 10. Open questions
 
-1. **Initiative:** does the initiative player go first in every phase, or does it alternate (§2.1)?
-2. **Order counting:** count at the start of the phase for both players at once (my recommendation), or at the start of each player's own turn?
-3. **Impetuous:** first in the round, before the Pilot phase?
-4. **TAG cap:** with a second pilot, can **two TAGs** be on the table at once? Or can the second pilot only call one in after the first TAG is lost?
-5. **Catalogue hosting:** a new public repo, or make this one public later?
+1. **"Until your next turn" effects:** now that each player's part of a phase is a turn, how long do N5 effects such as Suppressive Fire last? Proposed: until the start of that player's next **round**.
+2. **Eject test:** a PH roll?
+3. **PvPvE:** when do AI hostiles act?
+
+## 11. Numbers to set during balancing
+
+- Command Token starting pool (the N5 pool, slightly enlarged).
+- Command Token prices: drop pod, each stock TAG ("most of the pool"), Elite cap expansion.
+- Credit prices for pilots, Elites, kit, Lieutenant, NCO, chassis, components, and Signature options.
+- Capacity per chassis (S6, S7, S8).
