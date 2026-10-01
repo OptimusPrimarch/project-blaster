@@ -1,4 +1,4 @@
-# Project Blaster — Infinity N5 Mercenary Game Mode (v0.5 draft)
+# Project Blaster — Infinity N5 Mercenary Game Mode (v0.6 draft)
 
 A **non-commercial, fan-made game mode for Infinity N5**, intended as a love letter to Corvus Belli.
 
@@ -21,36 +21,38 @@ Status tags:
 | # | Topic | Decision | Status |
 |---|---|---|---|
 | 1 | Baseline | Infinity N5: dice, attributes, weapons, range bands, AROs, armor, states | **LOCKED** |
-| 2 | Identity | Mercenary-company game mode set in the Infinity universe. Non-commercial. | **LOCKED** |
+| 2 | Identity | Mercenary-company game mode in the Infinity universe. Non-commercial. No satire unless the setting supports it. | **LOCKED** |
 | 3 | Rounds | 3 | **LOCKED** |
-| 4 | Turn structure | Standard N5 turns, or phased alternating activations | **OPEN** (§2) |
-| 5 | Orders | Most troops Irregular. The pilot gets Tactical Awareness. | **LOCKED** |
-| 6 | Lieutenant | Kept. The pilot may take it for free, or buy NCO instead. Lieutenant options exist among Elites. | **LOCKED** |
-| 7 | Impetuous | Acts first in the round | **LOCKED** (leaning; §3) |
+| 4 | Turn structure | Phases: Pilot → Elite → Tactical → Reinforcement. In each phase, one player takes a standard active turn, then the other. Only models of that phase's type spend Orders. | **LOCKED** |
+| 5 | Order economy | Orders spent in early phases aren't available in later ones | **LOCKED** (mechanics PROPOSED, §2) |
+| 6 | Lieutenant | Costs credits on any eligible model, the pilot included. NCO costs more. Using the Lieutenant Order reveals who the Lieutenant is, which is the counterweight. | **LOCKED** |
+| 7 | Command Tokens | Fixed N5 pool, slightly enlarged, so they dwindle over the game. Expanded uses. | **LOCKED** |
 | 8 | Suppressive Fire | N5 state, unchanged | **LOCKED** |
-| 9 | Command Tokens | N5 Command Tokens with expanded uses. They replace our CP idea. | **LOCKED** |
-| 10 | Force cap | 1 TAG or pilot + 10 infantry on the table | **LOCKED** |
-| 11 | Allocation | 60–100 credits | **LOCKED** |
-| 12 | Elites | Up to 5, including reserves. Profile + 1 kit. Cap expandable with Command Tokens. | **LOCKED** |
-| 13 | Grunts | 0 credits; shared profile; equipment templates; one specialist template | **LOCKED** |
-| 14 | Fireteams | Dropped for simplicity | **LOCKED** (tentative) |
-| 15 | Reinforcement | Drop pod (Command Token), else Deployment (Tactical), else deployment zone | **LOCKED** |
-| 16 | New skill | **Deployment (Tactical)**. N5 Infiltration is unchanged. | **LOCKED** |
-| 17 | Calldowns | Orbital and aerial calldowns, with Speedballs as the baseline | **LOCKED** |
-| 18 | Replacement TAG | Stock lineup costed in Command Tokens; only a surviving pilot can call one | **LOCKED** |
+| 9 | Force cap | 1 TAG or pilot + 10 infantry on the table | **LOCKED** (see open question 3) |
+| 10 | Allocation | 60–100 credits | **LOCKED** |
+| 11 | Elites | Up to 5, including reserves. Profile + 1 kit. Cap expandable with Command Tokens. A second pilot is an expensive Elite option. | **LOCKED** |
+| 12 | Grunts | 0 credits; shared profile; equipment templates. Corpsman and Spotter are specialists. | **LOCKED** |
+| 13 | Fireteams | Dropped | **LOCKED** |
+| 14 | Reinforcement | Arrive in the Reinforcement phase and act with their own Orders. Arriving isn't an action. | **LOCKED** (leaning) |
+| 15 | Arrival methods | Drop pod (Command Token), else Deployment (Tactical), else deployment zone | **LOCKED** |
+| 16 | Deployment (Tactical) | New skill; every reinforcing model has it | **LOCKED** |
+| 17 | Calldowns | Orbital and aerial, with Speedballs as the baseline | **LOCKED** |
+| 18 | Replacement TAG | Stock lineup costed in Command Tokens; called in by a pilot | **LOCKED** |
 | 19 | Pilots | Fully custom. Free mount/dismount. Eject test. Jockey enemy TAGs with WIP vs WIP. Can steal unmanned TAGs. | **LOCKED** |
-| 20 | TAG chassis | Three sizes from N5 silhouettes: S6, S7, S8. Built from component cards. No Heat. | **LOCKED** |
-| 21 | Miniatures | Corvus Belli miniatures recommended; N5 silhouettes for every unit | **LOCKED** |
-| 22 | Board | 36"×36", very dense terrain | **LOCKED** |
-| 23 | Victory | Objectives, not body count | **LOCKED** |
-| 24 | Mode | PvP and PvPvE | **LOCKED** |
+| 20 | TAG chassis | S6, S7, S8. Built from components. No Heat. | **LOCKED** |
+| 21 | Signature slot | Every TAG gets one slot for its "special cool thing." Not called an ultimate; most options have no prerequisites. | **LOCKED** |
+| 22 | Miniatures | Corvus Belli miniatures recommended; N5 silhouettes for every unit | **LOCKED** |
+| 23 | Board | 36"×36", very dense | **LOCKED** |
+| 24 | Victory | Objectives | **LOCKED** |
+| 25 | Mode | PvP and PvPvE | **LOCKED** |
+| 26 | List-building tool | New Recruit catalogue as the source of truth; cards generated from it later | **PROPOSED** (§8) |
 
 ---
 
-## 1. Identity
+## 1. Identity — LOCKED
 
 **What the mode adds to Infinity:** a mercenary company you build to your heart's content.
-- A **custom TAG**, assembled from chassis and component cards.
+- A **custom TAG**, assembled from chassis, components, and a Signature slot.
 - A **custom pilot**.
 - A pool of **Elite specialists**, modeled on the specialists in standard Infinity armies.
 - **Grunts** as standard issue.
@@ -61,58 +63,47 @@ How it differs from *Infinity Deathmatch: TAG Raid*, Corvus Belli's official TAG
 |---|---|---|
 | Format | 2–4 player free-for-all | 1v1, or 1v1 plus AI hostiles |
 | Focus | TAGs are the stars | One TAG supporting up to 10 infantry |
-| Engine | CodeOne | Full N5 |
+| Engine | CodeOne | Full N5, with phases |
 | Building | Not confirmed whether TAGs can be customized | TAGs built from components; custom pilots; specialist pool |
 | Unique systems | Multiplayer | Reinforcements, Speedball calldowns, replacement TAGs, pilots who dismount and jockey enemy TAGs |
 
 ---
 
-## 2. Turn structure — OPEN
+## 2. Round structure — LOCKED (details PROPOSED)
 
-If most troops are Irregular, standard N5 turns become workable, so the earlier decision on phases is back on the table.
+In every phase, the initiative player takes a standard N5 active turn, and the opponent reacts with AROs. Then the roles swap. Only models of that phase's type may spend Orders.
 
-**Option A — Standard N5 turns, most troops Irregular** (recommended)
-- Each player gets a full active turn, as in N5.
-- Each model can spend only its own Irregular Order. The pilot has 2, from Tactical Awareness.
-- **Pros:**
-  - **No translation work.** Every N5 rule that refers to the active turn, the reactive turn, or a start-of-turn step works unchanged. This includes Suppressive Fire timing, Command Token timing, the Impetuous phase, and the Lieutenant.
-  - **Irregular Orders already do what the phases were for.** No model can soak up the whole force's Orders, so the TAG can't rampage. That makes counter-TAG balance much easier.
-  - **Impetuous-first is already how N5 works.** Impetuous Orders are spent at the start of the active turn.
-  - **Familiar.** An Infinity player can pick it up instantly. It reads as a game mode, not a new game.
-- **Cost:**
-  - You lose the Stargrave-style interleaving and the importance-based activation order.
-  - The first turn swings harder, because one side moves everything before the other acts. Irregular Orders soften this: each model gets only its own Order.
+| # | Phase | Who spends Orders | Notes |
+|---|---|---|---|
+| 0 | **Start of round** *(PROPOSED)* | Nobody | Initiative. **Order Count for the whole round** (§2.1). |
+| 1 | **Impetuous** *(PROPOSED)* | Impetuous troops | First, regardless of phase, per your earlier leaning |
+| 2 | **Pilot** | Pilots and the TAG they're in | Includes a second pilot taken as an Elite |
+| 3 | **Elite** | Elites | |
+| 4 | **Tactical** | Grunts | The standard N5 turn, so N5 rules apply here unchanged |
+| 5 | **Reinforcement** | New arrivals | Arrivals deploy, then act with their own Orders. Arriving isn't an action. |
 
-**Option B — Phased alternating activations** (Command → Impetuous → Pilot → Elite → Grunt)
-- **Pros:**
-  - Less downtime.
-  - Importance sets the activation order.
-  - A more distinctive feel.
-- **Cost:**
-  - Every N5 rule tied to active or reactive turns needs a translation rule.
-  - Command Token timing needs one too.
-  - Mission scoring steps need one too.
+### 2.1 Order economy — PROPOSED (my reading; confirm)
+"The more Orders you spend up front, the less you'll have in the coming phases" needs a shared pool that lasts across phases. My reading:
+
+- **Pilot and Elites are Regular.** They generate the pool.
+- **Grunts are Irregular.** Each keeps its own Order for the Tactical phase.
+- **The pilot's Tactical Awareness Order** is Irregular and belongs to the pilot.
+- **The pool is counted once, at the start of the round.** Today N5 counts Orders at the start of each player's turn. That step has to move, because the Pilot and Elite phases come before the standard turn.
+- Pool Orders left unspent carry down into later phases. Grunts can use them in the Tactical phase.
+
+**The trade-off this creates:** the Pilot phase can pour pool Orders into the TAG, but every Order it takes is one an Elite or Grunt doesn't get. This brings back the standard Infinity choice of concentrating Orders on one model. So counter-TAG tools have to be solid: AT weapons, hacking, and jockeying.
+
+**Watch:** N5 effects that last "until your next turn" (Suppressive Fire, for example). Proposed rule: a player's *turn* is their part of any phase, and such effects last until the start of that player's next **round**.
 
 ---
 
-## 3. Orders and command — LOCKED (details PROPOSED)
+## 3. Orders and command — LOCKED
 
 | Rule | Detail |
 |---|---|
-| **Orders** | Most troops are Irregular, so each spends only its own Order |
-| **Pilot** | Has Tactical Awareness, giving 2 Orders. These Orders also drive the TAG while the pilot is mounted. |
-| **Lieutenant** | Required. The pilot may take it for free, or buy NCO instead. Some Elite profiles offer a Lieutenant option. |
-| **Impetuous** | Acts first. Native to N5 under Option A; its own phase before Pilot under Option B. |
-| **Command Tokens** | N5 uses, plus: drop pods, replacement TAGs, expanding the Elite cap, calldowns |
-
-**Watch: a pilot Lieutenant inside the TAG.** If N5 still gives the Lieutenant an extra Order of its own, a pilot Lieutenant gives the TAG **3 Orders a turn**. That's the counter-TAG risk you flagged. Options:
-- Allow it, and price the TAG accordingly.
-- The Lieutenant's extra Order can't be spent while the pilot is mounted.
-- Make Lieutenant on the pilot cost credits, not come free.
-
-**Check: the Command Token economy.** N5 Command Tokens are (I believe) a fixed allotment per game, not income each round. Verify this. If so, we expand their uses by either:
-- Adding per-round income. Then "pre-spend to expand the Elite cap" means "skip round-1 income."
-- Enlarging the starting pool. Then pre-spending simply means starting with fewer.
+| **Lieutenant** | Required. Costs credits. The pilot and some Elites can take it. Using the Lieutenant Order reveals the Lieutenant (N5). |
+| **NCO** | Costs more credits than Lieutenant |
+| **Command Tokens** | The N5 pool, slightly enlarged. They are not regained. Uses: everything N5 allows, plus drop pods, replacement TAGs, expanding the Elite cap, and calldowns. |
 
 ---
 
@@ -120,15 +111,12 @@ If most troops are Irregular, standard N5 turns become workable, so the earlier 
 
 | Slot | Rule |
 |---|---|
-| **Allocation** | 60 or 100 credits, agreed before the game |
-| **Pilot + TAG** | One. Pilot fully custom; TAG assembled from chassis and component cards. |
+| **Allocation** | 60 or 100 credits |
+| **Pilot + TAG** | One. Pilot fully custom. TAG = chassis + components + Signature. |
 | **Elites** | Up to 5, including reserves. Fixed profile + 1 kit. Cap expandable with Command Tokens. |
+| **Second pilot** | An expensive Elite option. They can spend Command Tokens to call in a stock TAG as early as the first Pilot phase. This is intended; both players have the option. |
 | **Grunts** | 0 credits. Fill the remaining infantry slots. |
-| **On-table cap** | 1 TAG or pilot + 10 infantry |
-
-**Objectives:**
-- Elites are the main specialists.
-- One Grunt template gives up its heavier weapon to become a specialist.
+| **On-table cap** | 1 TAG or pilot + 10 infantry (see open question 3) |
 
 **PROPOSED:** seed Elite and component prices from N5 points (roughly N5 points ÷ 3, rounded), then simplify into price bands where equal cost means roughly equal power.
 
@@ -136,24 +124,24 @@ If most troops are Irregular, standard N5 turns become workable, so the earlier 
 
 ## 5. Reinforcement and calldowns — LOCKED
 
-The 10-model cap is the only throttle on reinforcements. Use the first method that applies:
+- **Timing:** reinforcements arrive in the **Reinforcement phase**, then act with their own Orders.
+- **Throttle:** the 10-model cap is the only limit.
 
-1. **Drop pod (costs a Command Token):** anywhere on the board. It scatters and damages whatever it lands on. **Speedballs** are the baseline.
-2. **Deployment (Tactical)** — a new skill. Works like N5's other deployment skills. The model must be placed within Zone of Control of an allied model and out of line of sight of every enemy.
+**Arrival methods.** Use the first that applies:
+1. **Drop pod (costs a Command Token):** anywhere on the board. It scatters and damages whatever it lands on. Speedballs are the baseline.
+2. **Deployment (Tactical):** a new skill that every reinforcing model has. The model must be placed within Zone of Control of an allied model and out of line of sight of every enemy.
 3. **Deployment zone:** only if neither of the above is possible.
 
-- **Elites** reinforce only from reserves you built before the game.
+**Reserves:**
+- **Elites** come only from reserves built before the game.
 - **Grunt** reserves are unlimited.
-- **PROPOSED:** every reinforcing model has Deployment (Tactical) by default.
-- **OPEN:** can reinforcements act on the turn they arrive?
-
-**Calldowns:**
-- Orbital and aerial support, built on the Speedball baseline.
-- These are mercenary assets, with no Helldivers theme.
 
 **Replacement TAG:**
 - Choose from a stock lineup, each TAG costed in Command Tokens.
-- Only a surviving pilot can call one in.
+- A pilot calls it in during the Pilot phase.
+- **PROPOSED:** it lands in that round's Reinforcement phase.
+
+**Calldowns:** orbital and aerial support, built on the Speedball baseline.
 
 ---
 
@@ -167,43 +155,60 @@ The 10-model cap is the only throttle on reinforcements. Use the first method th
 | **Unmanned TAGs** | A pilot can climb into an enemy TAG whose pilot has dismounted, and take it |
 
 **TAG builder:**
-- **Chassis** come in three sizes, matching N5 TAG silhouettes: **S6, S7, S8**.
-- **Weapon and system component cards** on mounts.
+- **Chassis** in three sizes: S6, S7, S8.
+- **Weapon and system components** on mounts.
+- **Signature slot:** one special ability or signature piece of gear. Most options have no prerequisites.
 - **Capacity** keeps each build coherent. Credits keep the whole force balanced.
-- **No Heat.** Customization depth comes from chassis, mounts, systems, and the pilot build.
+- No Heat.
 
-**Pilots:**
-- **PROPOSED:** skills + sidearm + 1–2 gear.
+**Pilots — PROPOSED:**
+- Skills + sidearm + 1–2 gear.
 - When dismounted, the pilot fights as an infantry model.
 
 ---
 
-## 7. Elites and Grunts
+## 7. Elites and Grunts — LOCKED (lists PROPOSED)
 
-**Elites — PROPOSED pool:** Hacker, Doctor, Engineer, Forward Observer, Paramedic, Sniper, Missile Launcher, Lieutenant-capable Officer, and Heavy Infantry.
+**Elite pool:** Hacker, Doctor, Engineer, Forward Observer, Paramedic, Sniper, Missile Launcher, an Officer who can be Lieutenant, Heavy Infantry, and a **second pilot**.
 
-**Grunts — LOCKED: one shared profile; templates change equipment only.**
+**Grunts:** one shared profile. Templates change equipment only.
 
-**PROPOSED templates:**
-
-| Template | Equipment |
-|---|---|
-| Rifleman | Combi Rifle |
-| Gunner | Spitfire |
-| Grenadier | Light Grenade Launcher |
-| AT Gunner | Panzerfaust |
-| Corpsman | Paramedic + Combi Rifle |
-| **Specialist** | A lighter weapon + N5's Specialist skill |
-
-Check: if N5 still counts Paramedics as Specialist troops, the Corpsman already fills the Specialist role, and the two templates could merge.
+| Template | Equipment | Specialist? |
+|---|---|---|
+| Rifleman | Combi Rifle | |
+| Gunner | Spitfire | |
+| Grenadier | Light Grenade Launcher | |
+| AT Gunner | Panzerfaust | |
+| Corpsman | Paramedic + lighter weapon | Yes |
+| Spotter | Forward Observer + lighter weapon | Yes |
 
 ---
 
-## 8. Miniatures, bases, board — LOCKED
+## 8. List-building tool — PROPOSED: New Recruit first, cards later
 
-- Corvus Belli miniatures are recommended.
-- Every unit, TAGs included, uses N5 silhouettes and base sizes.
-- 36"×36" board with very dense terrain.
+### Recommendation
+Build the **New Recruit catalogue as the single source of truth**. Generate printable cards from it later.
+
+| | New Recruit catalogue | Hand-built cards |
+|---|---|---|
+| Rule enforcement | The builder enforces the Allocation, Elite cap, slots, and Capacity | Players check legality by hand |
+| Changing a price | Edit once; every list updates | Reprint every affected card |
+| Sharing | Players load it from a GitHub repo, on web or mobile | Print-and-play files |
+| At the table | Text roster, less tactile | Tactile, and you physically "assemble" the TAG |
+| Polish for the love letter | Functional | High |
+
+**Why not choose:** cards made by hand alongside the catalogue would mean two copies of the same data to keep in sync. Instead, the catalogue files (.gst / .cat) are structured data, so a script can read them and lay out unit, weapon, and component cards once balance settles. Cards become a generated output, never a second copy.
+
+### How New Recruit shapes the design
+- **Write rules as data constraints wherever possible:** slot counts, min/max limits, cost limits. Prose exceptions are hard to enforce in a builder.
+- **Cost types:** Credits, and Command Tokens (for pre-game spends like Elite cap expansion). Capacity could be a third cost type limited per TAG. **Prototype this early** to confirm the editor can cap a cost within one unit.
+- **Expanding the Elite cap:** an option that costs Command Tokens and raises the Elite limit. The editor's modifiers should handle this.
+- **Profile layouts:** set up N5-style unit attributes and weapon profiles once, and reuse them everywhere.
+
+### Hosting
+- New Recruit loads any GitHub repo with the .gst/.cat files **at the repo root**, via "Add or Remove games" → "Add from Github."
+- It probably needs to be a public repo.
+- Suggestion: a dedicated public repo for the catalogue. This repo stays the design workspace.
 
 ---
 
@@ -211,39 +216,22 @@ Check: if N5 still counts Paramedics as Specialist troops, the Corpsman already 
 
 | Cut | Why |
 |---|---|
-| Helldivers theme and satire | Fit neatly into the Infinity universe *(confirm the satire goes too)* |
-| TAG Heat | Not in N5; customization comes from elsewhere |
+| Helldivers theme and satire | Satire stays only where the Infinity setting supports it |
+| TAG Heat | Not in N5 |
 | Primers and Detonators | Only Anthem's chassis variety was kept |
-| Core abilities (TAG ultimates) | Assumed cut along with the Anthem pieces *(confirm)* |
+| "Ultimate" / Core abilities | Replaced by the Signature slot |
 | Size-agnostic bases; true line of sight for TAGs | Replaced by Corvus Belli miniatures and N5 silhouettes |
 | Command Points (CP) | Replaced by Command Tokens |
 | Our Overwatch rule | Replaced by N5 Suppressive Fire |
-| "Rally" reinforcement | Replaced by the Deployment (Tactical) skill |
-| Fireteams | Simplicity (tentative) |
+| "Rally" reinforcement | Replaced by Deployment (Tactical) |
+| Fireteams | Simplicity |
+| Free Lieutenant on the pilot | The Lieutenant now costs credits |
 
 ---
 
-## 10. Components
+## 10. Open questions
 
-- **Base game:** the N5 rules.
-- **Dice and tokens:** d20s and N5 markers, plus drop-pod and calldown markers.
-- **Cards:**
-  - Unit cards
-  - Weapon and gear cards
-  - TAG chassis and component cards
-  - Stock replacement-TAG cards
-  - Mission cards
-- **Miniatures per side:** 1 TAG, 1 pilot, up to 10 infantry, plus reserves.
-- **Terrain:** a very dense 36"×36" board.
-
-**Tooling note:** keep chassis, components, profiles, and templates as data tables. A list builder can then validate Allocations and print cards.
-
----
-
-## 11. Open questions
-
-1. **Turn structure:** Option A (standard N5, recommended) or Option B (phased)?
-2. **Pilot as Lieutenant:** how do we handle the possible 3-Order TAG (§3)?
-3. **Command Tokens:** per-round income, or a bigger starting pool?
-4. **Reinforcements:** can they act on the turn they arrive?
-5. **Confirm the cuts:** Core abilities, and the satirical tone.
+1. **Order economy:** is §2.1 the right reading? Pilot and Elites Regular, Grunts Irregular, pool counted once at the start of the round.
+2. **Impetuous:** first in the round, before the Pilot phase?
+3. **TAG cap:** with a second pilot, can **two TAGs** be on the table at once? Or can the second pilot only call one in after the first TAG is lost?
+4. **Catalogue hosting:** a new public repo, or make this one public later?
