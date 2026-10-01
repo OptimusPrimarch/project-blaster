@@ -1,5 +1,7 @@
 # Dogs of War — Infinity N5 Mercenary Game Mode (v0.9 draft)
 
+> **Archived.** The live version of this document is in [OptimusPrimarch/DogsOfWar](https://github.com/OptimusPrimarch/DogsOfWar/blob/main/design/00-foundations.md). Don't edit this copy.
+
 A **non-commercial, fan-made game mode for Infinity N5**, intended as a love letter to Corvus Belli.
 
 **How to read this doc:** N5 is the baseline for everything. This document records only:
@@ -221,8 +223,8 @@ Build the **New Recruit catalogue as the single source of truth**. Generate prin
 
 ### Hosting
 - New Recruit loads any GitHub repo with the .gst/.cat files **at the repo root**, via "Add or Remove games" → "Add from Github."
-- **LOCKED:** a new public repo, `dogs-of-war`. It holds both the catalogue (.gst/.cat at the root) and the design docs (in `design/`).
-- Once it exists, `dogs-of-war` is the single home for the design docs. The copy in `project-blaster` becomes an archive.
+- **LOCKED:** the public repo **OptimusPrimarch/DogsOfWar** holds both the catalogue (.gst/.cat at the root) and the design docs (in `design/`).
+- That repo is the single home for the design docs. This copy is an archive.
 
 ---
 
