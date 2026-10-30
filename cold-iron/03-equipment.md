@@ -40,7 +40,7 @@ Five body pieces, plus the option of nothing in each slot, give 12 body-armor bu
 |---|---|---|
 | Gambeson | Under, LAYERED | Reduce the damage of each hit by 1, to a minimum of 1. **[Proposed]** |
 | Chainmail | Under, LAYERED, IRON | BOON 1 on saves. **[Proposed]** |
-| Hard leather | Over | Save 5+. Crits ignore it (3.3). **[Proposed]** |
+| Hard leather | Over | Save 5+. Crits ignore it (3.3). |
 | Breastplate | Over, IRON | Save 5+. |
 | Full plate | Over, IRON | Save 4+. -1" Speed. **[Proposed, Open Q19]** |
 | Helm | Headgear | Downgrades the first crit against the wearer in a sequence to a normal hit. Stacks with all other armor. IRON? **[Open Q22]** |
@@ -56,7 +56,7 @@ Five body pieces, plus the option of nothing in each slot, give 12 body-armor bu
 - **Damage reduction.** If a save fails, reduce the hit's damage by the stated amount, to a minimum of 1, before applying it.
 - **Helm timing. [Proposed]** The first time a crit would be resolved against the wearer in a melee sequence or a ranged attack, it counts as a normal hit instead.
 
-## 3.3 Hard Leather and Crits [Proposed]
+## 3.3 Hard Leather and Crits
 
 **Rule:** a crit ignores hard leather. Against a crit, treat the model as not wearing it.
 
@@ -76,7 +76,7 @@ Everything else still applies to a crit: shield, cover, BOON and BANE, and the l
 
 - **Helm first.** The helm downgrades the first crit to a normal hit before the save, so hard leather works against it.
 - **Ranged attacks.** Sort the hit dice into normal hits and crits, then roll the saves in two batches.
-- **Spells and blasts** never crit, so hard leather always works against them.
+- **Spells and blasts** never crit, so hard leather always works against them. **[Proposed, depends on Open Q16 and Q17]**
 
 ## 3.4 Save Odds
 
@@ -156,3 +156,5 @@ Damage reduction is flat. BOON scales with the Save underneath it. So gambeson s
 RENDING 1 cancels chainmail's BOON exactly, so a weapon counter exists.
 
 **Ceiling.** Plate + shield + chainmail is an 88.9% Save (97.2% in cover). The two-slot rule does not lower that. The governors are cost (**[Open Q11]**), the Speed penalty on full plate, IRON for casters, and RENDING. Suggested cost order once budgets exist: gambeson and hard leather, then chainmail, then breastplate, then full plate. One shield-type item per model would also help. **[Open Q19]**
+
+**Why crits are the leather split.** The historical evidence on leather is thin and conflicting: it resists cuts, but sources disagree about thrusts and arrows. Splitting on piercing weapons would swing leather between a breastplate's 33.3% and nothing (16.7%) depending on the opponent's list, and would need a PIERCING tag on every weapon and monster attack. The crit split gives a steady 25-30% Save against anyone and needs no tags. If a piercing flavor is wanted later, RENDING already covers it.

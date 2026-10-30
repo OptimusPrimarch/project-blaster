@@ -51,7 +51,7 @@ There is no parry against ranged attacks.
 - Every model starts with a **6+** Save. Armor and cover improve it (see [Equipment](03-equipment.md)). A Save is never better than 2+.
 - BOON and BANE apply to the save die. **RENDING X** on a weapon gives the target BANE X on saves against that weapon's hits.
 - **[Proposed, Open Q4]** Crit hits get a save like any other hit.
-- **[Proposed]** A crit ignores hard leather: use the Save the model would have without it. Everything else still applies (see [Equipment](03-equipment.md)).
+- A crit ignores hard leather: use the Save the model would have without it. Everything else still applies (see [Equipment](03-equipment.md)).
 - **Damage reduction.** If the save fails, reduce the damage by the stated amount (minimum 1) before applying it.
 - Damage is tracked on the model. When the damage sustained equals its Wounds, the model is slain and removed immediately.
 - Weapon damage is 1-3. Crit damage is D3, D3+1, D6 or D6+1, as listed on the weapon.

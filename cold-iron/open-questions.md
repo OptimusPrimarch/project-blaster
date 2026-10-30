@@ -13,7 +13,7 @@
 **Q3. ★ Strike timing.** Does each strike resolve (save, then damage) as soon as it is allocated, or do all dice get allocated first?
 *Recommend:* immediately. It makes the first blow matter (which FERAL beasts rely on) and means nothing to track.
 
-**Q4. Crits and saves.** Does a crit hit get an armor save?
+**Q4. Crits and saves.** Does a crit hit get an armor save? (The hard leather rule assumes yes: other armor works against crits, leather does not.)
 *Recommend:* yes. A crit is dangerous because of its damage, not because it cannot be saved.
 
 **Q5. ★ Charge.** CHARGE (full: 2x Speed, then FIGHT) beats MOVE + FIGHT, because it fits double the movement and a fight into one activation. Options: (a) accept it, (b) require a straight path with no climbing or ladders, (c) give the charger a bonus.
