@@ -33,7 +33,7 @@ Keywords are written in CAPS (BOON, BANE, RENDING, LAYERED), matching the Voidwa
 |---|---|---|
 | [01-core-rules.md](01-core-rules.md) | Dice, BOON/BANE, profiles, the round, actions | Drafted |
 | [02-combat.md](02-combat.md) | Melee, ranged, saves, cover, dual wielding, blasts | Melee firm, ranged thin |
-| [03-equipment.md](03-equipment.md) | Hands, armor, shields, weapons | Armor firm |
+| [03-equipment.md](03-equipment.md) | Hands, armor slots, IRON, shields, weapons | Armor slots and IRON drafted |
 | [04-magic.md](04-magic.md) | Casting, odds, BACKBLAST, spell format | BACKBLAST table is a placeholder |
 | [05-terrain-and-movement.md](05-terrain-and-movement.md) | Line of sight, climbing, ladders, vantage | Ladders and vantage firm |
 | [06-scenarios.md](06-scenarios.md) | Table, warbands, deployment, game length, neutrals | Partial |

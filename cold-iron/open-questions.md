@@ -43,6 +43,9 @@
 **Q13. Base size.** 25-60mm bases: what do they change mechanically?
 *Recommend:* footprint only, plus a ladder restriction for bases over 40mm.
 
+**Q23. Wounds for Champions, Leaders and monsters.** You set Henchmen at about 3 and beasts at about 2. The draft's examples use Champion 5 and Leader 6. What range do you want?
+*Recommend:* Champions 5, Leaders 6, large monsters 8+. Check against damage: weapons deal 1-3 and crits go up to 7 (D6+1).
+
 ## Terrain
 
 **Q14. Ladders.** Restrictions for large bases, enemies near the top, and how many models can use one?
@@ -63,13 +66,16 @@
 
 ## Equipment
 
-**Q19. Shields, chainmail and plate.**
+**Q19. Held items and full plate.**
 - You wrote that a great shield imposes "boon 1 on your own melee attacks". The draft assumes **BANE 1**, since it is a drawback. Please confirm.
 - Great shield: how big is the Save bonus (+2?), and how many hands?
-- Buckler: BOON 1 on saves like chainmail? Does it take a hand?
-- Full plate: any drawback (Speed, cost)?
+- Buckler: BOON 1 on saves like chainmail? (Shields and bucklers are held, so each takes a hand.)
+- Full plate: the draft adds -1" Speed. Any other drawback? (Cost is Q11.)
 - Allow only one shield-type item per model?
-*Recommend:* BANE 1; great shield +2 and 1 hand; buckler BOON 1 and 1 hand; one shield-type item per model.
+*Recommend:* BANE 1; great shield +2 and 1 hand; buckler BOON 1; -1" Speed on full plate; one shield-type item per model.
+
+**Q22. IRON scope.** The draft makes chainmail, breastplate and full plate IRON: each costs a caster 1 Willpower die, and a caster reduced to 0 dice cannot cast. Is a helm IRON? Are shields? Per piece, or once if any IRON is worn?
+*Recommend:* per piece; the helm is IRON (it makes the helm a real choice for casters); shields are not unless iron-faced.
 
 ## Scenarios
 

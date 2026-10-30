@@ -7,7 +7,7 @@ Magic is high risk, high reward. It is the **only** place in the game where succ
 ## 4.1 Casting
 
 1. Spend the action the spell lists (half or full; default Full **[Proposed]**).
-2. Roll a number of d6 equal to the caster's **Willpower**, plus or minus dice from gear and statuses.
+2. Roll a number of d6 equal to the caster's **Willpower**, plus or minus dice from gear, statuses and IRON armor.
 3. Count successes on each die:
    - **4+** is 1 success.
    - A natural **6** is 2 successes (a crit).
@@ -27,12 +27,15 @@ A WIL 3 caster (a trained battle caster) backblasts 1 time in 8.
 
 | Willpower | BACKBLAST (0 successes) | 1+ | 2+ | 3+ | 4+ | 5+ |
 |---|---|---|---|---|---|---|
+| 1 | 50.0% | 50.0% | 16.7% | 0.0% | 0.0% | 0.0% |
 | 2 | 25.0% | 75.0% | 41.7% | 13.9% | 2.8% | 0.0% |
 | 3 | 12.5% | 87.5% | 62.5% | 33.3% | 13.0% | 3.2% |
 | 4 | 6.3% | 93.8% | 77.1% | 52.1% | 28.0% | 11.5% |
 | 5 | 3.1% | 96.9% | 86.5% | 67.4% | 44.2% | 23.8% |
 
 (Columns 1+ to 5+ are the chance of reaching at least that many successes.)
+
+The 1-die row is what IRON armor does to a weak caster: a WIL 3 caster in chainmail rolls 2 dice (25% backblast), and in chainmail plus a breastplate rolls 1 (50%).
 
 Rule of thumb: TN 1-2 is reliable, TN 3 is a gamble for an average caster, and TN 4+ is for experts.
 
@@ -70,4 +73,5 @@ Roll a d6. The effects are placeholders until the table is designed.
 
 - A caster's Willpower is its dice pool (see the scale in [Core Rules](01-core-rules.md)).
 - **[Proposed]** Gear and statuses add or remove dice directly. A staff adds 1 die.
+- **IRON armor. [Proposed, Open Q22]** A caster rolls one fewer Willpower die for each IRON piece it wears (chainmail, breastplate, full plate). A caster reduced to 0 dice cannot cast. Hard leather and gambeson do not count. This is where the name "Cold Iron" pays off: steel is for fighters, and casters dress light.
 - How casters get their spells, and whether saves apply to spell damage: **[Open Q17]**.

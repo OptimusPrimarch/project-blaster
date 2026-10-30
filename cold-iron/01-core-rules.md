@@ -60,7 +60,7 @@ Every model has this profile:
 
 Fight, Shoot and Mettle are target numbers, so **lower is better** (3+ beats 5+). Speed, Willpower and Wounds are values, so higher is better. A dash (-) means the model cannot do that thing: no Shoot means no ranged attacks, and no Willpower means no casting.
 
-Every profile also lists a **base size** (25-60mm; **[Open Q13]** on what it changes), a **Save** (every model starts at 6+, and armor improves it, see [Equipment](03-equipment.md)), its weapons, and its keywords.
+Every profile also lists a **base size** (25-60mm; **[Open Q13]** on what it changes), a **Save** (every model starts at 6+, and armor improves it, see [Equipment](03-equipment.md); a model in hard leather also lists a separate crit Save), its weapons, and its keywords.
 
 ### Willpower scale
 
@@ -80,7 +80,7 @@ Staffs, grimoires and similar gear add to this a little (see [Magic](04-magic.md
 | Speed | 4"-6" (fast beasts 7"+) |
 | Fight / Shoot | 3+ (elite) to 5+ (rabble) |
 | Mettle | 3+ (steady) to 6+ (witless) |
-| Wounds | Henchmen 1, Champions 3, Leaders 4, large beasts and monsters more |
+| Wounds | Henchmen about 3, beasts about 2. Champions, Leaders and monsters have more. **[Open Q23]** |
 
 ### Roles
 
@@ -91,7 +91,7 @@ A warband has 5-15 models:
 - **3 or more HENCHMEN** (required).
 - **Any others** are optional: specialists, hirelings, beasts.
 
-Henchmen are meant to die, and die quickly. Only durable characters and heroes have several Wounds.
+Henchmen are meant to die, and die quickly. At about 3 Wounds they survive a glancing hit, but a blow with real force finishes them. Beasts average 2. Only durable characters and heroes have a lot more.
 
 **FERAL. [Proposed]** Beasts such as hounds and dire bats. A FERAL model cannot interact with objectives. A 15-model warband is expected to be rare and built from fragile FERAL models that only pay off if they deliver the first blow. They will not be standing all game.
 
@@ -99,11 +99,11 @@ Henchmen are meant to die, and die quickly. Only durable characters and heroes h
 
 | Model | Role | SPD | FGT | SHT | MET | WIL | WND | Base |
 |---|---|---|---|---|---|---|---|---|
-| Cutthroat | Henchman | 5" | 5+ | 5+ | 5+ | - | 1 | 25mm |
-| Sellsword | Champion | 5" | 3+ | 4+ | 4+ | - | 3 | 32mm |
-| Captain | Leader | 5" | 3+ | 4+ | 3+ | - | 4 | 32mm |
-| Hedge-witch | Optional | 5" | 5+ | 5+ | 4+ | 3 | 2 | 28mm |
-| Dire hound | Optional, FERAL | 7" | 4+ | - | 6+ | - | 1 | 32mm |
+| Cutthroat | Henchman | 5" | 5+ | 5+ | 5+ | - | 3 | 25mm |
+| Sellsword | Champion | 5" | 3+ | 4+ | 4+ | - | 5 | 32mm |
+| Captain | Leader | 5" | 3+ | 4+ | 3+ | - | 6 | 32mm |
+| Hedge-witch | Optional | 5" | 5+ | 5+ | 4+ | 3 | 3 | 28mm |
+| Dire hound | Optional, FERAL | 7" | 4+ | - | 6+ | - | 2 | 32mm |
 
 ## 1.3 Measuring and Engagement
 
