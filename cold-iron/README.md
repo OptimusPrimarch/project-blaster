@@ -1,6 +1,6 @@
-# Dark Fantasy Skirmish: Rules Draft
+# Cold Iron: Rules Draft
 
-**Working title.** A d6 skirmish game for 5-15 models a side, set in a wyrd, low-magic, gritty (not grimdark) dark-fantasy world. The setting is deliberately vague and agnostic. Magic is rare and risky. Every scenario puts neutral threats on the table (PvPvE).
+**Cold Iron** (working title) is a d6 skirmish game for 5-15 models a side, set in a wyrd, low-magic, gritty (not grimdark) dark-fantasy world. The setting is deliberately vague and agnostic. Magic is rare and risky. Every scenario puts neutral threats on the table (PvPvE).
 
 This is a **work in progress**. Expect gaps and changes.
 
