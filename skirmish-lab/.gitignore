@@ -1,0 +1,7 @@
+# Original rulebooks stay local (large, copyrighted). Everything derived from them is committed.
+sources/*
+!sources/.gitkeep
+!sources/README.md
+
+.DS_Store
+*.tmp
