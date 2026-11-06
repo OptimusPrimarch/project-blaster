@@ -1,8 +1,8 @@
 slug,title,edition,publisher,format,filename,pages,has_text_layer,priority,in_scope,out_of_scope,status,notes
-infinity-n5,Infinity N5,,,,,,,,,,todo,confirm publisher/edition from file
-black-death-city,Black Death City,,,,,,,,,,todo,confirm publisher/edition from file
-kill-team,Kill Team,,,,,,,,,,todo,which edition?
-trench-crusade,Trench Crusade,,,,,,,,,,todo,which edition?
-brutality,Brutality,,,,,,,,,,todo,confirm publisher/edition from file
-carnevale,Carnevale,,,,,,,,,,todo,confirm publisher/edition from file
-grimdark-future-firefight,Grimdark Future Firefight,,,,,,,,,,todo,confirm version from file
+infinity-n5,Infinity N5,N5,,pdf,infinity-n5.pdf,,,,core rules,factions; army lists; campaigns,todo,check text layer; may need OCR
+black-death-city,Black Death City,,,pdf,black-death-city.pdf,,,,core rules,factions; army lists; campaigns,todo,check text layer; may need OCR; confirm publisher/edition from file
+kill-team,Kill Team,2024,Games Workshop,pdf,kill-team-2024.pdf,,,,core rules,factions; army lists; campaigns,todo,check text layer; may need OCR
+trench-crusade,Trench Crusade,1st (living rules),,pdf,trench-crusade-YYYY-MM.pdf,,,,core rules,factions; army lists; campaigns,todo,living ruleset: record file version/date; re-ingest on update; check text layer; may need OCR
+brutality,Brutality,,,pdf,brutality.pdf,,,,core rules,factions; army lists; campaigns,todo,check text layer; may need OCR; confirm publisher/edition from file
+carnevale,Carnevale,,,pdf,carnevale.pdf,,,,core rules,factions; army lists; campaigns,todo,check text layer; may need OCR; confirm publisher/edition from file
+grimdark-future-firefight,Grimdark Future Firefight,,,pdf,grimdark-future-firefight.pdf,,,,core rules,factions; army lists; campaigns,todo,check text layer; may need OCR; confirm version from file

@@ -18,6 +18,10 @@ My own stated preferences for the new game. Claude records these but never infer
 - 2026-11-06 | Activation: **card/token/dice-driven** (a draw or roll decides who acts next). Open point: exactly how this interacts with the 1v1 and co-op modes. Revisit after the pilot games are ingested.
 - 2026-11-06 | Progression: **later module**. Design a strong one-off game first, add campaign rules afterward.
 
+### Project scope
+- 2026-11-06 | Ingest **core rules only** for each game. Faction/army books, army lists, and campaign supplements are out of scope for now.
+- 2026-11-06 | Kill Team means the **2024 edition**. Trench Crusade is a living ruleset (first official edition, updated over time): record the version/date of the file ingested, and re-ingest when it changes.
+
 ## Still to ask
 - Core dice mechanic
 - Melee vs. ranged balance
@@ -29,4 +33,4 @@ My own stated preferences for the new game. Claude records these but never infer
 - Co-op enemy AI style
 
 ## Per-game likes and dislikes
-Collected after the pilot games are ingested. See `game-notes.md` (to be created).
+See `game-notes.md`. Tier 1 (gut notes) is captured before ingestion; Tier 2 (per-mechanic ratings) after each game's card exists.
